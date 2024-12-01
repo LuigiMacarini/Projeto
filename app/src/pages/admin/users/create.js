@@ -3,6 +3,7 @@ import MenuUsers from '@/components/MenuUsers';
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
+import styles from "@/styles/Home.module.css";
 import Axios from 'axios';
 
 export default function createuser() {
@@ -112,8 +113,7 @@ export default function createuser() {
 
                 </div>
                 <div className="form-group p-2">
-                    <button className="btn btn-outline-success" type="button" onClick={handleCreateUser} >Salvar</button>
-                    <Link className="btn btn-outline-info" href="/admin/users">Voltar</Link>
+                    <button className={styles.btnUpdates} type="button" onClick={handleCreateUser} >Salvar</button>
                 </div>
                 </form>
             </div>

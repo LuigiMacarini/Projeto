@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
+import styles from "@/styles/Home.module.css";
 
 export default function readEvent() {
   const API_URL = "http://localhost:8080/api/events/id/"; // Rota para eventos
@@ -103,7 +104,7 @@ export default function readEvent() {
                 </div>
 
                 <div className="form-group p-2">
-                    <Link className="btn btn-outline-info" href="/admin/events">Voltar</Link>
+                    <Link className={styles.btnUpdates} href="/admin/events">Voltar</Link>
                 </div>
             </form>
           </div>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
+import styles from "@/styles/Home.module.css";
 
 export default function readuser() {
   
@@ -128,7 +129,7 @@ export default function readuser() {
                 <input type="text" id="created_at" name="created_at" className="form-control" value={user.created_at} readOnly />
               </div>
               <div className="form-group p-2">
-                <Link className="btn btn-outline-info" href="/admin/users">Voltar</Link>
+                <Link className={styles.btnUpdates} href="/admin/users">Voltar</Link>
               </div>
             </form>
           </div>

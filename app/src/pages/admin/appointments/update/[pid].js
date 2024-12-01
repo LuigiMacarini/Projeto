@@ -2,6 +2,7 @@ import NavAdmin from '@/components/NavAdmin'
 import MenuUsers from '@/components/MenuUsers';
 import Head from 'next/head'
 import Link from 'next/link'
+import styles from "@/styles/Home.module.css";
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
@@ -136,8 +137,7 @@ export default function readAppointment() {
                 </div>
 
                 <div className="form-group p-2">
-                    <button className="btn btn-outline-success" type="button" onClick={handleUpdateAppointment}>Salvar</button>
-                    <Link className="btn btn-outline-info" href="/admin/appointments">Voltar</Link>
+                    <button className={styles.btnUpdates} type="button" onClick={handleUpdateAppointment}>Salvar</button>
                 </div>
                 </form>
           </div>

@@ -1,6 +1,7 @@
 import NavHome from '@/components/NavHome'
 import Head from 'next/head'
 
+
 export default function Home() {
   return (
     <>
@@ -13,13 +14,7 @@ export default function Home() {
       <NavHome />
       </div>
 
-      <div className="d-flex justify-content-center p-2">
-        <div className="container">
-          <div className="row border-bottom">
-              <h3> Sistema de Base de Conhecimentos</h3>
-          </div>
-        </div>
-      </div>  
+       
   </>
   )
 }

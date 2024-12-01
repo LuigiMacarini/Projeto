@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
 import Axios from 'axios';
-
+import styles from "@/styles/Home.module.css";
 export default function createStudent() {
 
   const API_URL = "http://localhost:8080/api/students";  // URL da API para criar estudante
@@ -105,8 +105,7 @@ export default function createStudent() {
               </div>
 
               <div className="form-group p-2">
-                <button className="btn btn-outline-success" type="button" onClick={handleCreateStudent}>Salvar</button>
-                <Link className="btn btn-outline-info" href="/admin/students">Voltar</Link>
+                <button className={styles.btnUpdates} type="button" onClick={handleCreateStudent}>Salvar</button>
               </div>
             </form>
           </div>

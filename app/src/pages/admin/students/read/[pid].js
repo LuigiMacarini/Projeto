@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
+import styles from "@/styles/Home.module.css";
 
 export default function readStudent() {
   const API_URL = "http://localhost:8080/api/students/id/"; // Rota para estudantes
@@ -122,7 +123,7 @@ export default function readStudent() {
                 </div>
 
                 <div className="form-group p-2">
-                    <Link className="btn btn-outline-info" href="/admin/students">Voltar</Link>
+                    <Link className={styles.btnUpdates} href="/admin/students">Voltar</Link>
                 </div>
                 </form>
           </div>

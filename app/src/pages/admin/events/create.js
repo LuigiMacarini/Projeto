@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
 import Axios from 'axios';
+import styles from "@/styles/Home.module.css";
 
 export default function createEvent() {
 
@@ -82,8 +83,7 @@ export default function createEvent() {
                 <input type="datetime-local" id="date" name="date" className="form-control" value={evento.date} min={getCurrentDatetime()} onChange={handleChange} />
               </div>
               <div className="form-group p-2">
-                <button className="btn btn-outline-success" type="button" onClick={handleCreateEvent}>Salvar</button>
-                <Link className="btn btn-outline-info" href="/admin/events">Voltar</Link>
+                <button className={styles.btnUpdates} type="button" onClick={handleCreateEvent}>Salvar</button>
               </div>
             </form>
           </div>

@@ -2,6 +2,7 @@ import NavAdmin from '@/components/NavAdmin'
 import MenuUsers from '@/components/MenuUsers';
 import Head from 'next/head'
 import Link from 'next/link'
+import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useRouter } from 'next/router';
@@ -154,8 +155,7 @@ export default function updateuser() {
                     <input type="text" id="created_at" name="created_at" className="form-control" value={ user.created_at } readOnly/>
                 </div>
                 <div className="form-group p-2">
-                    <button className="btn btn-outline-success" type="button" onClick={handleUpdateUser} >Salvar</button>
-                    <Link className="btn btn-outline-info" href="/admin/users">Voltar</Link>
+                    <button className={styles.btnUpdates} type="button" onClick={handleUpdateUser} >Salvar</button>
                 </div>
                 </form>
             </div>

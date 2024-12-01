@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Home from "@/styles/Home.module.css"; 
 
 export default function NavHome() {
     return (
-
-        <nav className="navbar navbar-light bg-warning justify-content-between p-2">
-           
-            <Link className="navbar-brand" href="#"><h2>Base de Conhecimentos</h2></Link>
+        <nav className={Home.containerHome}>
+            
+            <div>
+                
+                <h1 className={Home.font}>Projeto Base de Conhecimentos</h1>
+            </div>
             <div className="form-group">
-                    <Link className="btn btn-success" href="/login">Login</Link>
-            </div>   
+                <Link className={Home.buttonHome} href="/login">Login</Link>
+            </div>
 
         </nav>
     )

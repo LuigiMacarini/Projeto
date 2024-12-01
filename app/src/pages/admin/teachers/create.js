@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react';
 import Axios from 'axios';
+import styles from "@/styles/Home.module.css";
 
 export default function createTeacher() {
 
@@ -104,8 +105,7 @@ export default function createTeacher() {
               </div>
 
               <div className="form-group p-2">
-                <button className="btn btn-outline-success" type="button" onClick={handleCreateTeacher}>Salvar</button>
-                <Link className="btn btn-outline-info" href="/admin/teachers">Voltar</Link>
+                <button className={styles.btnUpdates} type="button" onClick={handleCreateTeacher}>Salvar</button>
               </div>
             </form>
           </div>

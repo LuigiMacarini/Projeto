@@ -3,8 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Home from "@/styles/Home.module.css"; 
 
-export default function Home() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -49,13 +50,13 @@ export default function Home() {
       </Head>
       <div>
         <form onSubmit={handleLogin}>
-          <div className="d-flex justify-content-center p-2">
+          <div className={Home.containerHome}>
             <div className="col-md-4">
               <div>
-                <h2>Login</h2>
+                <h2 className={Home.font}>Login</h2>
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="username">
+                <label className={Home.font} htmlFor="username">
                   Usuário
                 </label>
                 <input
@@ -69,7 +70,7 @@ export default function Home() {
                 />
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="password">
+                <label className={Home.font} htmlFor="password">
                   Senha
                 </label>
                 <input
@@ -82,15 +83,10 @@ export default function Home() {
                   required
                 />
               </div>
-              <div className="form-group p-2">
-                <button className="btn btn-outline-success" type="submit">
-                  Login
-                </button>
-                <Link className="btn btn-outline-info" href="/">
-                  Voltar
-                </Link>
+              <div>
+              <button className={Home.buttonLog}>Login</button>
               </div>
-              {error && <p style={{ color: "red" }}>{error}</p>}
+              {error && <p className="text-danger mt-3">{error}</p>}
             </div>
           </div>
         </form>
